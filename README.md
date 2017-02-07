@@ -1,5 +1,4 @@
-# SpringBoot AngularJS CRUD 
-https://travis-ci.org/VMAproject/SpringBoot_AngularJS_CRUD.svg?branch=master
+# SpringBoot AngularJS CRUD [![Build Status](https://travis-ci.org/VMAproject/SpringBoot_AngularJS_CRUD.svg?branch=master)](https://travis-ci.org/VMAproject/SpringBoot_AngularJS_CRUD)
 
 - Spring Boot 1.5.1.RELEASE
 - Spring 4.3.5.RELEASE [transitively]
