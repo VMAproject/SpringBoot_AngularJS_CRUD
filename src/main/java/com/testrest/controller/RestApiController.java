@@ -3,6 +3,9 @@ package com.testrest.controller;
 import com.testrest.model.User;
 import com.testrest.service.UserService;
 import com.testrest.util.CustomErrorType;
+import org.jsondoc.core.annotation.Api;
+import org.jsondoc.core.annotation.ApiMethod;
+import org.jsondoc.core.pojo.ApiStage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
-
+@Api(name = "Crud app ",description = "methods to work",stage = ApiStage.RC)
 @RestController
 @RequestMapping("/api")
 public class RestApiController {
@@ -29,6 +32,7 @@ public class RestApiController {
     // ----------------------------------Retrieve All Users---------------------------------------------
 
     @RequestMapping(value = "/user/", method = RequestMethod.GET)
+    @ApiMethod(description = "Retrieve All Users")
     public ResponseEntity<List<User>> listAllUser() {
         List<User> users = userService.findAllUsers();
         if (users.isEmpty()) {
@@ -41,6 +45,7 @@ public class RestApiController {
     // -----------------------------------Retrieve Single User------------------------------------------
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
+    @ApiMethod(description = "Retrieve Single User")
     public ResponseEntity<?> getUser(@PathVariable("id") long id) {
         logger.info("Fetching User with id {}", id);
 
@@ -57,6 +62,7 @@ public class RestApiController {
 
 
     @RequestMapping(value = "/user/", method = RequestMethod.POST)
+    @ApiMethod(description = "Create a User")
     public ResponseEntity<?> createUser(@RequestBody User user, UriComponentsBuilder uriComponentsBuilder) {
         logger.info("Creating User : {}", user);
 
@@ -75,6 +81,7 @@ public class RestApiController {
     // ---------------------------------------- Update a User ------------------------------------------------
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
+    @ApiMethod(description = "Update a User")
     public ResponseEntity<?> updateUser(@PathVariable("id") long id, @RequestBody User user) {
         logger.info("Updating User with id {}", id);
 
@@ -97,6 +104,7 @@ public class RestApiController {
     // ------------------- Delete a User-----------------------------------------
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
+    @ApiMethod(description = "Delete a User")
     public ResponseEntity<?> deleteUser(@PathVariable("id") long id) {
         logger.info("Fetching & Deleting User with id {}", id);
 
@@ -113,6 +121,7 @@ public class RestApiController {
     // ------------------- Delete All Users-----------------------------
 
     @RequestMapping(value = "/user/", method = RequestMethod.DELETE)
+    @ApiMethod(description = "Delete All Users")
     public ResponseEntity<User> deleteAllUsers() {
         logger.info("Deleting All Users");
 
