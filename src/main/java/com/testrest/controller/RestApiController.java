@@ -17,7 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
-@Api(name = "Crud app ",description = "methods to work",stage = ApiStage.RC)
+@Api(name = "Crud app ", description = "methods to work", stage = ApiStage.RC)
 @RestController
 @RequestMapping("/api")
 public class RestApiController {

@@ -17,6 +17,6 @@ Let’s add a view to our MVC app. We would be using Freemarker templates in our
 
 #Run the application
 Finally, Let’s run the application, firstly with ‘local’ profile [H2]. Next shot will be with ‘prod’ profile [MySQL].
-
+->    http://localhost:8080/SpringBootCRUDApp/api/user/
 #Via IDEA
 Run it directly, in that case default profile will be used. In case you want a different profile to be used, create a Run configuration for you main class, specifying the profile. To do that from toolbar, select Run->Run Configurations->Arguments->VM Arguments. Add -Dspring.profiles.active=local or -Dspring.profiles.active=prod]
