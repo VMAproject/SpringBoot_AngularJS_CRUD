@@ -2,6 +2,7 @@ package com.testrest.util;
 
 
 public class CustomErrorType {
+
     private String errorMessage;
 
     public CustomErrorType(String errorMessage) {
