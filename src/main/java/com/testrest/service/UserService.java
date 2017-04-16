@@ -22,11 +22,7 @@ public interface UserService {
     List<User> findAllUsers();
 
 
-
-
-
     boolean isUserExist(User user);
-
 
 
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-@Api(name = "Crud app ",description = "methods to work",stage = ApiStage.RC)
+@Api(name = "Crud app ", description = "methods to work", stage = ApiStage.RC)
 @Controller
 public class AppController {
 

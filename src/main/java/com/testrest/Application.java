@@ -1,10 +1,10 @@
 package com.testrest;
 
 import com.testrest.config.JpaConfig;
+import org.jsondoc.spring.boot.starter.EnableJSONDoc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
-import org.jsondoc.spring.boot.starter.EnableJSONDoc;
 
 @EnableJSONDoc
 @Import(JpaConfig.class)
